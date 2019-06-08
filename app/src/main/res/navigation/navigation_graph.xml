@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/frag1">
+
+<fragment
+
+    android:id="@+id/frag1"
+    android:label="@string/fragment1"
+    android:name="com.example.taller7.Fragment1"
+    tools:layout="@layout/fragment_fragment1">
+
+    <!-- Fragment 1 layout
+        -->
+    <action
+        android:id="@+id/frag1tutu"
+        app:destination="@+id/frag2"></action>
+
+</fragment>
+
+    <fragment
+
+        android:id="@+id/frag2"
+        android:label="@string/fragment2"
+        android:name="com.example.taller7.Fragment2"
+        tools:layout="@layout/fragment_fragment2" >
+
+        <!-- Fragment 2 layout
+    -->
+        <action
+            android:id="@+id/frag2tutu"
+            app:destination="@+id/frag3"></action>
+    </fragment>
+
+    <fragment
+
+
+        android:id="@+id/frag3"
+        android:label="@string/fragment3"
+        android:name="com.example.taller7.Fragment3"
+        tools:layout="@layout/fragment_fragment3">
+        <!-- Fragment 2 layout
+        -->
+        <!-- Graying out action for this fragment for the moment to do not doing any
+        <action
+            android:id="@+id/frag3tutu"
+            app:destination="@+id/frag3"></action>
+        -->
+        <!-- Adding or send data
+-->
+        <argument
+            android:name="message"
+            android:defaultValue="No message"
+            app:argType="String"></argument>
+
+    </fragment>
+
+</navigation>
